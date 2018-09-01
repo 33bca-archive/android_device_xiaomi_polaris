@@ -1,5 +1,9 @@
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.sat.fallback.dist=45 \
+    persist.camera.sat.fallback.dist.d=5 \
+    persist.camera.sat.fallback.luxindex=405 \
+    persist.camera.sat.fallback.lux.d=20 \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.miui.cit,com.qualcomm.qti.qmmi
 
 # CNE and DPM
@@ -23,6 +27,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.wda.enable=true \
     persist.rmnet.data.enable=true \
     ro.use_data_netmgrd=true
+
+# Display features
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.displayfeature.histogram.enable=true \
+    ro.eyecare.brightness.threshold=15 \
+    ro.eyecare.brightness.level=8 \
+    ro.qcom.ad=1 \
+    ro.qcom.ad.calib.data=/vendor/etc/sdr_config.cfg \
+    ro.qcom.ad.hdr.calib.data=/vendor/etc/hdr_config.cfg \
+    ro.qcom.ad.sensortype=2 \
+    ro.qualcomm.cabl=0 \
+    ro.whitepoint_calibration_enable=false
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
